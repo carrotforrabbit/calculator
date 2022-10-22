@@ -38,11 +38,18 @@ function clearInput() {
 }
 
 function colorChange() {
+   
     switch (document.getElementById("bgrColor").value)
     {
-        case "Blank" : document.getElementById("bodyColor").style.backgroundColor = 'rgb(213, 156, 165)'; break;
-        case "Dark" : document.getElementById("bodyColor").style.backgroundColor = 'darkslateblue'; break;
-        case "Light" : document.getElementById("bodyColor").style.backgroundColor = 'mistyrose'; break;
+        case "Blank" : 
+            document.getElementById("bodyColor").style.backgroundColor = 'rgb(213, 156, 165)';
+            break;
+        case "Dark" : 
+            document.getElementById("bodyColor").style.backgroundColor = 'darkslateblue';
+            break;
+        case "Light" : 
+            document.getElementById("bodyColor").style.backgroundColor = 'mistyrose'; 
+            break;
     }
 }
 
