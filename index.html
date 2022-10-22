@@ -10,8 +10,9 @@
 </head>
 
 <body id="bodyColor">
+    <p class="theme-text"> Нажмите, чтобы поменять тему</p>
     <select name="bgrColor" id="bgrColor" onchange="colorChange()">
-        <option value="Blank"></option>
+        <option value="Blank" default></option>
         <option value="Dark">Темная</option>
         <option value="Light">Светлая</option>
     </select>
@@ -23,7 +24,7 @@
         <label for="number2">Напишите второе число</label>
         <input id="number2" type="text">
     </div>
-    <p>Нажмите на знак операции:</p>
+    <p class="text">Нажмите на знак операции:</p>
     <div class="button-container">
         <button onclick="calcSum()">+</button>
         <button onclick="calcSubstraction()">-</button>
