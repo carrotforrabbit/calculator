@@ -1,21 +1,17 @@
+let x = document.getElementById('number1');
+let y = document.getElementById('number2');
+
 function calcSum() {
-    let x = document.getElementById('number1');
-    let y = document.getElementById('number2');
     let result = (+x.value + +y.value);
     results.innerHTML = x.value + " + " + y.value + " = " + result;
 }
 
 function calcSubstraction() {
-    let x = document.getElementById('number1');
-    let y = document.getElementById('number2');
     let result = (x.value - y.value);
     results.innerHTML = x.value + " - " + y.value + " = " + result;
 }
 
 function calcDevision() {
-    let x = document.getElementById('number1');
-    let y = document.getElementById('number2');
-
     if (y.value == 0) {
         results.innerHTML = "На ноль делить нельзя";
     } else {
@@ -25,8 +21,6 @@ function calcDevision() {
 }
 
 function calcMultiply() {
-    let x = document.getElementById('number1');
-    let y = document.getElementById('number2');
     let result = (x.value * y.value);
     results.innerHTML = x.value + " * " + y.value + " = " + result;
 }

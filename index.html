@@ -10,12 +10,36 @@
 </head>
 
 <body id="bodyColor">
-    <p class="theme-text" id="rop"> Нажмите, чтобы поменять тему</p>
+    <p class="theme-text"> Click to change the theme</p>
     <select name="bgrColor" id="bgrColor" onchange="colorChange()">
         <option value="Blank" default></option>
-        <option value="Dark">Темная</option>
-        <option value="Light">Светлая</option>
+        <option value="Dark">Dark</option>
+        <option value="Light">Light</option>
     </select>
+
+    <div class="calculator">
+        <div class="output">0</div>
+        <button class="btn control">-</button>
+        <button class="btn control">+</button>
+        <button class="btn control">&times;</button>
+        <button class="btn control">&divide;</button>
+        <button class="btn number">9</button>
+        <button class="btn number">8</button>
+        <button class="btn number">7</button>
+        <button class="btn number">6</button>
+        <button class="btn number">5</button>
+        <button class="btn number">4</button>
+        <button class="btn number">3</button>
+        <button class="btn number">2</button>
+        <button class="btn number">1</button>
+        <button class="btn number">0</button>
+        <button class="btn number">.</button>
+        <button class="btn number">AC</button>
+        <button class="btn equal">=</button>
+    </div>
+    </div>
+    </div>
+    <!-- 
     <div class="label-container">
         <label for="number1 text">Напишите первое число</label>
         <input id="number1" type="text">
@@ -34,7 +58,7 @@
     <div class="result-container text"> Результат:
         <div id="results"></div>
     </div>
-    <button class="delete text" type="button" onclick="clearInput()">Сбросить</button>
+    <button class="delete text" type="button" onclick="clearInput()">Сбросить</button> -->
 
     <script src="./scr/script/script.js"></script>
 </body>
