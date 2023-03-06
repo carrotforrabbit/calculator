@@ -6,10 +6,21 @@ keys.addEventListener("click", (e) => {
   if (e.target.matches("button")) {
     const key = e.target;
     const action = key.dataset.action;
+    const keyContent = key.textContent;
+    const displayedNum = display.textContent;
+    const previousKeyType = calculator.dataset.previousKeyType;
 
     if (!action) {
-      console.log("number key!");
+      if (displayedNum === "0" || previousKeyType === "operator") {
+        display.textContent = keyContent;
+      } else {
+        display.textContent = displayedNum + keyContent;
+      }
     }
+
+    Array.from(key.parentNode.children).forEach((k) =>
+      k.classList.remove("is-depressed")
+    );
 
     if (
       action === "add" ||
@@ -17,11 +28,14 @@ keys.addEventListener("click", (e) => {
       action === "multiply" ||
       action === "divide"
     ) {
-      console.log("operator key!");
+      key.classList.add("is-depressed");
+      calculator.dataset.previousKeyType = "operator";
+      calculator.dataset.firstValue = displayedNum;
+      calculator.dataset.operator = action;
     }
 
     if (action === "decimal") {
-      console.log("decimal key!");
+      display.textContent = displayedNum + ".";
     }
 
     if (action === "clear") {
@@ -29,7 +43,25 @@ keys.addEventListener("click", (e) => {
     }
 
     if (action === "calculate") {
-      console.log("equal key!");
+      const secondValue = displayedNum;
+      const operator = calculator.dataset.operator;
+      const firstVlaue = calculator.dataset.firstValue;
+      const calculate = (n1, operator, n2) => {
+        let result = "";
+        if (operator === "add") {
+          result = parseFloat(n1) + parseFloat(n2);
+        } else if (operator === "subtract") {
+          result = parseFloat(n1) - parseFloat(n2);
+        } else if (operator === "multiply") {
+          result = parseFloat(n1) * parseFloat(n2);
+        } else if (operator === "divide") {
+          result = parseFloat(n1) / parseFloat(n2);
+        }
+
+        return result;
+      };
+
+      display.textContent = calculate(firstVlaue, operator, secondValue);
     }
   }
 });
@@ -82,11 +114,3 @@ function colorChange() {
       break;
   }
 }
-
-// function colorChange() {
-//     if (document.getElementById("bgrColor").value == "Dark")
-//     document.getElementById("bodyColor").style.backgroundColor = "yellow";
-
-//     if (document.getElementById("bgrColor").value == "Light")
-//     document.getElementById("bodyColor").style.backgroundColor = "green";
-// }

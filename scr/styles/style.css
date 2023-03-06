@@ -1,5 +1,4 @@
 body {
-  margin-top: 50px;
   display: block;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: rgb(213, 156, 165);
@@ -21,6 +20,21 @@ body {
   font-size: 30px;
 }
 
+.is-depressed {
+  background: greenyellow;
+  border: 3px solid rgb(72, 61, 139);
+}
+
+.btn.control:hover {
+  background: linear-gradient(
+    91.1deg,
+    rgb(139, 50, 247) -2.3%,
+    rgb(249, 136, 245) 44.4%,
+    rgb(231, 75, 184) 103.4%
+  );
+  border: 3px solid rgb(72, 61, 139);
+}
+
 .btn:hover {
   background: linear-gradient(
     91.1deg,
@@ -38,12 +52,14 @@ body {
 
 .calc-container {
   width: 350px;
-
   margin: 0 auto;
   padding: 1rem;
   border: 1px solid rgb(0, 0, 138);
   border-radius: 25px;
   background-color: deeppink;
+  -webkit-box-shadow: 6px 7px 32px -6px rgb(72, 61, 139);
+  -moz-box-shadow: 6px 7px 32px -6px rgb(72, 61, 139);
+  box-shadow: 6px 7px 32px -6px rgb(72, 61, 139);
 }
 
 .calc-keys {
@@ -55,11 +71,14 @@ body {
   border: 1px solid rgb(0, 0, 138);
   border-radius: 25px;
   background-color: deeppink;
+  -webkit-box-shadow: 3px 4px 15px -6px rgb(72, 61, 139);
+  -moz-box-shadow: 3px 4px 15px -6px rgb(72, 61, 139);
+  box-shadow: 3px 4px 15px -6px rgb(72, 61, 139);
 }
 
 .output {
   grid-column: 1/5;
-  padding: 25px;
+  padding: 20px;
   margin-bottom: 1rem;
   font-size: 30px;
   border: 1px solid darkblue;
@@ -67,6 +86,9 @@ body {
   background-color: deeppink;
   color: white;
   text-align: right;
+  -webkit-box-shadow: 3px 4px 15px -6px rgb(72, 61, 139);
+  -moz-box-shadow: 3px 4px 15px -6px rgb(72, 61, 139);
+  box-shadow: 3px 4px 15px -6px rgb(72, 61, 139);
 }
 
 .output:focus,
